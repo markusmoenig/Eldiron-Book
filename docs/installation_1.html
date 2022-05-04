@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Eldiron Book</title>
-        <meta name="robots" content="noindex" />
+        <title>Installation - Eldiron Book</title>
 
 
         <!-- Custom HTML head -->
@@ -82,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="installation_1.html"><strong aria-hidden="true">1.</strong> Installation</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="installation_1.html" class="active"><strong aria-hidden="true">1.</strong> Installation</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -143,17 +142,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>Eldiron is a cross-platform creator for role-playing-games (RPGs).</p>
-<p>Eldiron consists of <strong>Eldiron Creator</strong> which has these features:</p>
-<ul>
-<li>Import tile-maps and assign a category and/or tags to each tile. Eldiron comes with a range of default tile-maps but you can use your own too.</li>
-<li>Draw regions (like cities, dungeons or the world itself) using the region editor.</li>
-<li>Create behavior for characters, region areas, items and game logic using a sophisticated yet easy-to-use node system which has a full, optional, scripting backend.</li>
-<li>Play and/or visually debug your game.</li>
-</ul>
-<p>Apart from the creator, Eldiron consists of server and client components which I will document over time. You can use Eldiron to create single player, multi-player (MMO) or instanced multi-player experiences for every platform.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+                        <h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <h2 id="installing-from-source"><a class="header" href="#installing-from-source">Installing from source</a></h2>
 <p>Eldiron is written in Rust, to run it you have to install Rust and its package manager cargo. Please follow the instructions on this <a href="https://www.rust-lang.org/tools/install">page</a>.</p>
 <p>After you successfully installed Rust, clone the <a href="https://github.com/markusmoenig/Eldiron">repository</a> (or download the source via a .zip file), open a terminal, navigate to the Eldiron directory and start Eldiron Creator with <code>cargo run --release</code>.</p>
@@ -164,6 +153,9 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
 
                         <div style="clear: both"></div>
@@ -172,6 +164,9 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
             </nav>
 
@@ -211,11 +206,6 @@
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
 
     </body>
 </html>
