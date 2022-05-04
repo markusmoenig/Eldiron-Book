@@ -9,4 +9,4 @@ Eldiron consists of **Eldiron Creator** which has these features:
 * Create behavior for characters, region areas, items and game logic using a sophisticated yet easy-to-use node system which has a full, optional, scripting backend.
 * Play and/or visually debug your game.
 
-Apart from the creator, Eldiron consists of server and client components which I will document over time. You can use Eldiron to create single player, multi-player (MMO) or instanced multi-player experiences for every platform.
+Apart from the creator, Eldiron consists of server and client components which I will document over time. You will be able to use Eldiron to create single player, multi-player (MMO) or instanced multi-player experiences for every platform.
