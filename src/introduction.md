@@ -9,6 +9,4 @@
 
 Eldiron consists of **Eldiron Creator**, a desktop application available for macOS, Windows and Linux, and various clients which will run the created games on nearly any device with support for single player and multi-player games.
 
-The first part of this book will describe how to create games using *Eldiron Creator* and will than focus on the clients in the *Clients* section.
-
-Whenever you see the name *Eldiron* in the book it references *Eldiron Creator*, the clients will be referenced explicitly by name.
+Whenever you see the name *Eldiron* in this book it references *Eldiron Creator*, the clients will be referenced explicitly by name.

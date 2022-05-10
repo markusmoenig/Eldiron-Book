@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation_1.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects_2.html"><strong aria-hidden="true">2.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="tiles_3.html"><strong aria-hidden="true">3.</strong> Tiles View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tiles/overview.html"><strong aria-hidden="true">3.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="tiles/details.html"><strong aria-hidden="true">3.2.</strong> Details View</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation_1.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="creator_2.html"><strong aria-hidden="true">2.</strong> Eldiron Creator</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.1.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.1.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="tiles.html"><strong aria-hidden="true">2.2.</strong> Tiles View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tiles/overview.html"><strong aria-hidden="true">2.2.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="tiles/details.html"><strong aria-hidden="true">2.2.2.</strong> Details View</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,14 +149,28 @@
 <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p><a href="https://eldiron.com">Eldiron</a> is a cross-platform creator for role-playing-games (RPGs).</p>
 <p>Eldiron consists of <strong>Eldiron Creator</strong>, a desktop application available for macOS, Windows and Linux, and various clients which will run the created games on nearly any device with support for single player and multi-player games.</p>
-<p>The first part of this book will describe how to create games using <em>Eldiron Creator</em> and will than focus on the clients in the <em>Clients</em> section.</p>
-<p>Whenever you see the name <em>Eldiron</em> in the book it references <em>Eldiron Creator</em>, the clients will be referenced explicitly by name.</p>
+<p>Whenever you see the name <em>Eldiron</em> in this book it references <em>Eldiron Creator</em>, the clients will be referenced explicitly by name.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <h2 id="installing-from-source"><a class="header" href="#installing-from-source">Installing from source</a></h2>
 <p>Eldiron is written in Rust, to run it you have to install Rust and its package manager cargo. Please follow the instructions on this <a href="https://www.rust-lang.org/tools/install">page</a>.</p>
 <p>After you successfully installed Rust, clone the <a href="https://github.com/markusmoenig/Eldiron">repository</a> (or download the source via a .zip file), open a terminal, navigate to the Eldiron directory and start Eldiron Creator with <code>cargo run --release</code>.</p>
 <h2 id="prebuilt-binaries"><a class="header" href="#prebuilt-binaries">Prebuilt Binaries</a></h2>
 <p>At a later stage I will provide pre-build binaries for each platform.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="eldiron-creator"><a class="header" href="#eldiron-creator">Eldiron Creator</a></h1>
+<p>Eldiron Creator let's you interactively create and debug your games.</p>
+<p>Eldiron Creator has two toolbars.</p>
+<h4 id="control-toolbar"><a class="header" href="#control-toolbar">Control Toolbar</a></h4>
+<p>The top one is called the control toolbar and has these functions:</p>
+<ul>
+<li><strong>Undo / Redo</strong>. The undo / redo state depends on the current view. Not all views have undo support.</li>
+<li><strong>Project Switch</strong>. You can switch through your current game projects by clicking the <strong>&lt; &gt;</strong> arrows.</li>
+<li><strong>Help</strong>. Opens this book on the currently displayed view section.</li>
+<li><strong>Play</strong>. Plays the game.</li>
+<li><strong>Debug</strong>. Debugs the game. This is mostly useful in the Region, Character and System views as you can visually see the node connections which are currently executed. Also you can monitor the variables in the Characters view as they always reflect the in-game state.</li>
+</ul>
+<h4 id="view-toolbar"><a class="header" href="#view-toolbar">View Toolbar</a></h4>
+<p>You can select the current view in the view toolbar (Tiles, Regions, Characters, Systems, Items and Game). All views (except the Game view) have two states, an overview state which shows all elements in an overview (activated by pressing the left part of the view button) and the detail state which shows an editor for the currently selected state (activated by pressing the right part of the button).</p>
+<p>To the left of the view buttons is also an element switch, you can use its <strong>&lt; &gt;</strong> buttons to switch through all available elements in the current view.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="projects"><a class="header" href="#projects">Projects</a></h1>
 <p>Eldiron stores it's game projects in the <em>Eldiron</em> directory in your desktops <em>Documents</em> directory. When first started Eldiron will ask for the name of your first game project (the default name is <em>New Game</em>) and create the project with the default starter content.</p>
 <p>When Eldiron is not running, you can rename game folders to change the name of the game, delete or copy game folders.</p>
@@ -182,7 +196,7 @@
 <li><em>Systems</em> behavior files may be dependent on variables defined in the <em>characters</em> which invoke them.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tiles-view"><a class="header" href="#tiles-view">Tiles View</a></h1>
-<p>In the tiles view you can define meta data for the tile-maps present in the <a href="projects/assets.html">asset</a> directory.</p>
+<p>In the tiles-view you can define meta data for the tile-maps present in the <a href="projects/assets.html">asset</a> directory.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
 <p>The tile overview displays a node for each tile-map present in the <a href="tiles//projects/assets.html">assets</a> tile-map directory.</p>
 <p>The icon displayed for the node is the tile set as default in the details view.</p>
