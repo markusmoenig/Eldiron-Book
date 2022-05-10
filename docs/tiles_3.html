@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Eldiron Book (WiP)</title>
-        <meta name="robots" content="noindex" />
+        <title>Tiles View - Eldiron Book (WiP)</title>
 
 
         <!-- Custom HTML head -->
@@ -82,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation_1.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects_2.html"><strong aria-hidden="true">2.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="tiles_3.html"><strong aria-hidden="true">3.</strong> Tiles View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tiles/overview.html"><strong aria-hidden="true">3.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="tiles/details.html"><strong aria-hidden="true">3.2.</strong> Details View</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation_1.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects_2.html"><strong aria-hidden="true">2.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="tiles_3.html" class="active"><strong aria-hidden="true">3.</strong> Tiles View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tiles/overview.html"><strong aria-hidden="true">3.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="tiles/details.html"><strong aria-hidden="true">3.2.</strong> Details View</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -143,75 +142,20 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p align="center">
-  <img src="images/logo.png">
-</p>
-<h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p><a href="https://eldiron.com">Eldiron</a> is a cross-platform creator for role-playing-games (RPGs).</p>
-<p>Eldiron consists of <strong>Eldiron Creator</strong>, a desktop application available for macOS, Windows and Linux, and various clients which will run the created games on nearly any device with support for single player and multi-player games.</p>
-<p>The first part of this book will describe how to create games using <em>Eldiron Creator</em> and will than focus on the clients in the <em>Clients</em> section.</p>
-<p>Whenever you see the name <em>Eldiron</em> in the book it references <em>Eldiron Creator</em>, the clients will be referenced explicitly by name.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
-<h2 id="installing-from-source"><a class="header" href="#installing-from-source">Installing from source</a></h2>
-<p>Eldiron is written in Rust, to run it you have to install Rust and its package manager cargo. Please follow the instructions on this <a href="https://www.rust-lang.org/tools/install">page</a>.</p>
-<p>After you successfully installed Rust, clone the <a href="https://github.com/markusmoenig/Eldiron">repository</a> (or download the source via a .zip file), open a terminal, navigate to the Eldiron directory and start Eldiron Creator with <code>cargo run --release</code>.</p>
-<h2 id="prebuilt-binaries"><a class="header" href="#prebuilt-binaries">Prebuilt Binaries</a></h2>
-<p>At a later stage I will provide pre-build binaries for each platform.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="projects"><a class="header" href="#projects">Projects</a></h1>
-<p>Eldiron stores it's game projects in the <em>Eldiron</em> directory in your desktops <em>Documents</em> directory. When first started Eldiron will ask for the name of your first game project (the default name is <em>New Game</em>) and create the project with the default starter content.</p>
-<p>When Eldiron is not running, you can rename game folders to change the name of the game, delete or copy game folders.</p>
-<p>The design goal for Eldiron projects was to make sharing of game content between games as easy as possible. Most game components are saved in individual files to allow sharing them with others. Each section of this book will mention where the corresponding game data is saved.</p>
-<p>Game projects consists of two directories: <em>assets</em> and <em>game</em>.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="assets-directory"><a class="header" href="#assets-directory">Assets Directory</a></h1>
-<p>The <em>assets</em> directory contains all static data of the game.</p>
-<ul>
-<li>
-<p>The <strong>fonts</strong> directory contains all fonts used by the game, to install new fonts just copy new fonts into this directory and on the next restart of Eldiron they will show up in the relevant font selectors.</p>
-</li>
-<li>
-<p>The <strong>tilemaps</strong> directory contains all tile-maps. Tile-maps are PNG images which contain game tiles. Copy new images into this folder and they will show up in the <strong>Tiles</strong> view upon restart. Eldiron will create .json files for each tile-map which include the user defined meta data for the tiles.</p>
-</li>
-</ul>
-<p>The name of each file represents the in-game name of the represented entity. For example you can just rename a character file to rename the character itself. Eldiron will perform the same action when asked to rename a character.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="game-directory"><a class="header" href="#game-directory">Game Directory</a></h1>
-<p>The <em>game</em> directory contains all user created data for the game.</p>
-<p>Each folder name represents the type of game content it contains and matches the user interface sections in Eldiron and in this book.</p>
-<p>You can share individual files with others, but there are some dependencies you have to be aware of:</p>
-<ul>
-<li><em>Region</em> files need the tile-maps used to draw the region in the <em>assets/tilemaps</em> directory.</li>
-<li><em>Systems</em> behavior files may be dependent on variables defined in the <em>characters</em> which invoke them.</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="tiles-view"><a class="header" href="#tiles-view">Tiles View</a></h1>
+                        <h1 id="tiles-view"><a class="header" href="#tiles-view">Tiles View</a></h1>
 <p>In the tiles view you can define meta data for the tile-maps present in the <a href="projects/assets.html">asset</a> directory.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
-<p>The tile overview displays a node for each tile-map present in the <a href="tiles//projects/assets.html">assets</a> tile-map directory.</p>
-<p>The icon displayed for the node is the tile set as default in the details view.</p>
-<p>You can set the <strong>grid size</strong> of the tile-map (the size of the tiles in the tile-map) by clicking on the <em>Grid Size</em> property of the node.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="details-view"><a class="header" href="#details-view">Details View</a></h1>
-<p>In the details view you can assign meta-data for each tile in the tile-map. This is an important step as Eldiron needs to know how each tile is supposed to be used in-game.</p>
-<p>You can click on a tile to select it or multi-select tiles by clicking and dragging the mouse over a range of tiles.</p>
-<p>The most important step is to give each tile a usage role, this can be one of:</p>
-<ul>
-<li><strong>Unused</strong> - This tile is ignored and will not be shown in the region editor.</li>
-<li><strong>Environment</strong> - This is the default tile type for any kind of non blocking terrain. Use it for grass, floors etc.</li>
-<li><strong>Road</strong> - Same as <em>Environment</em> but the AI in the <em>Pathfinder</em> node will prefer road tiles over environment tiles.</li>
-<li><strong>Blocking</strong> - Every <em>Environment</em> tile which is not accessible to the player, like rocks, mountains, walls etc.</li>
-<li><strong>Character</strong> - Character tiles, like animation tiles for a warrior.</li>
-<li><strong>Utility</strong> - Utility character tiles. Like a ship or a horse.</li>
-<li><strong>Water</strong> - Water tiles. Tiles where a ship can go.</li>
-<li><strong>Effect</strong> - Effect tiles, like an explosion.</li>
-<li><strong>Icon</strong> - Icons.</li>
-</ul>
-<p>When you click the <strong>Enter Tags</strong> button you can assign <strong>,</strong> separated <em>tags</em> to a tile, like <em>cupboard</em> or <em>waterfall</em>. Tags are always lower case. Tags can be used to quickly find tiles or to auto-convert regions to different tile-maps (not yet implemented).</p>
-<p>By clicking the <strong>Set Anim</strong> button you create an animation for the first tile in the selected range. The other tiles will be set to <em>Unused</em> by default.</p>
-<p>The <strong>Clear Anim</strong> button will remove an animation sequence form the currently selected tile.</p>
-<p>The <strong>Set Default</strong> button will set the currently selected tile as the default tile of the tile-map, it will be shown as the tile-map icon in the <a href="tiles//tiles/overview.html">overview</a>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="projects/game.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next" href="tiles/overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -219,7 +163,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="projects/game.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next" href="tiles/overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
@@ -258,11 +208,6 @@
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
 
     </body>
 </html>
