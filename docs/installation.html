@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Details View - Eldiron Book (WiP)</title>
+        <title>Installation - Eldiron Book (WiP)</title>
 
 
         <!-- Custom HTML head -->
@@ -13,21 +13,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -35,7 +35,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "../";
+            var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../installation_1.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../creator_2.html"><strong aria-hidden="true">2.</strong> Eldiron Creator</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../projects.html"><strong aria-hidden="true">2.1.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../projects/assets.html"><strong aria-hidden="true">2.1.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="../projects/game.html"><strong aria-hidden="true">2.1.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="../tiles.html"><strong aria-hidden="true">2.2.</strong> Tiles View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tiles/overview.html"><strong aria-hidden="true">2.2.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../tiles/details.html" class="active"><strong aria-hidden="true">2.2.2.</strong> Details View</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="installation.html" class="active"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="ui_creator.html"><strong aria-hidden="true">3.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assets.html"><strong aria-hidden="true">3.1.</strong> Assets View</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -113,7 +113,7 @@
                     <h1 class="menu-title">Eldiron Book (WiP)</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -142,34 +142,24 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="details-view"><a class="header" href="#details-view">Details View</a></h1>
-<p>In the details view you can assign meta-data for each tile in the tile-map. This is an important step as Eldiron needs to know how each tile is supposed to be used in-game.</p>
-<p>You can click on a tile to select it or multi-select tiles by clicking and dragging the mouse over a range of tiles.</p>
-<p>The most important step is to give each tile a usage role, this can be one of:</p>
-<ul>
-<li><strong>Unused</strong> - This tile is ignored and will not be shown in the region editor.</li>
-<li><strong>Environment</strong> - This is the default tile type for any kind of non blocking terrain. Use it for grass, floors etc.</li>
-<li><strong>Road</strong> - Same as <em>Environment</em> but the AI in the <em>Pathfinder</em> node will prefer road tiles over environment tiles.</li>
-<li><strong>Blocking</strong> - Every <em>Environment</em> tile which is not accessible to the player, like rocks, mountains, walls etc.</li>
-<li><strong>Character</strong> - Character tiles, like animation tiles for a warrior.</li>
-<li><strong>Utility</strong> - Utility character tiles. Like a ship or a horse.</li>
-<li><strong>Water</strong> - Water tiles. Tiles where a ship can go.</li>
-<li><strong>Effect</strong> - Effect tiles, like an explosion.</li>
-<li><strong>Icon</strong> - Icons.</li>
-</ul>
-<p>When you click the <strong>Enter Tags</strong> button you can assign <strong>,</strong> separated <em>tags</em> to a tile, like <em>cupboard</em> or <em>waterfall</em>. Tags are always lower case. Tags can be used to quickly find tiles or to auto-convert regions to different tile-maps (not yet implemented).</p>
-<p>By clicking the <strong>Set Anim</strong> button you create an animation for the first tile in the selected range. The other tiles will be set to <em>Unused</em> by default.</p>
-<p>The <strong>Clear Anim</strong> button will remove an animation sequence form the currently selected tile.</p>
-<p>The <strong>Set Default</strong> button will set the currently selected tile as the default tile of the tile-map, it will be shown as the tile-map icon in the <a href="/tiles/overview.html">overview</a>.</p>
+                        <h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<h2 id="installing-from-source"><a class="header" href="#installing-from-source">Installing from source</a></h2>
+<p>Eldiron is written in Rust, to run it you have to install Rust and its package manager cargo. Please follow the instructions on this <a href="https://www.rust-lang.org/tools/install">page</a>.</p>
+<p>After you successfully installed Rust, clone the <a href="https://github.com/markusmoenig/Eldiron">repository</a> (or download the source via a .zip file), open a terminal, navigate to the Eldiron directory and start Eldiron Creator with <code>cargo run --release</code>.</p>
+<h2 id="steam"><a class="header" href="#steam">Steam</a></h2>
+<p>Once Eldiron is in pre-release it will be available on its Steam page.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../tiles/overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="projects.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -177,30 +167,17 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../tiles/overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="projects.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
@@ -209,13 +186,13 @@
         </script>
 
 
-        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
 

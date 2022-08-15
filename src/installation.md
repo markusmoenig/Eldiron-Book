@@ -6,7 +6,7 @@ Eldiron is written in Rust, to run it you have to install Rust and its package m
 
 After you successfully installed Rust, clone the [repository](https://github.com/markusmoenig/Eldiron) (or download the source via a .zip file), open a terminal, navigate to the Eldiron directory and start Eldiron Creator with `cargo run --release`.
 
-## Prebuilt Binaries
+## Steam
 
-At a later stage I will provide pre-build binaries for each platform.
+Once Eldiron is in pre-release it will be available on its Steam page.
 
