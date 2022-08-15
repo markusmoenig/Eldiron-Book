@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+    {
+        "label": "mdbook build",
+        "type": "shell",
+        "command": "mdbook",
+        "args": [
+            "build",
+            "--dest-dir",
+            "docs"
+        ],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    },
+    ]
+}

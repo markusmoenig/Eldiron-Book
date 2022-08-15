@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="ui_creator.html"><strong aria-hidden="true">3.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assets.html"><strong aria-hidden="true">3.1.</strong> Assets View</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="nodegraph.html"><strong aria-hidden="true">3.</strong> Node Graphs & Scripting </a></li><li class="chapter-item expanded "><a href="ui_creator.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assets.html"><strong aria-hidden="true">4.1.</strong> Assets View</a></li><li class="chapter-item expanded "><a href="regions.html"><strong aria-hidden="true">4.2.</strong> Regions View</a></li><li class="chapter-item expanded "><a href="characters.html"><strong aria-hidden="true">4.3.</strong> Characters View</a></li><li class="chapter-item expanded "><a href="systems.html"><strong aria-hidden="true">4.4.</strong> Systems View</a></li><li class="chapter-item expanded "><a href="items.html"><strong aria-hidden="true">4.5.</strong> Items View</a></li><li class="chapter-item expanded "><a href="game.html"><strong aria-hidden="true">4.6.</strong> Game View</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -157,13 +157,16 @@
 <h2 id="steam"><a class="header" href="#steam">Steam</a></h2>
 <p>Once Eldiron is in pre-release it will be available on its Steam page.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="projects"><a class="header" href="#projects">Projects</a></h1>
-<p>Eldiron stores it's game projects in the <em>Eldiron</em> directory in your desktops <em>Documents</em> directory. When first started Eldiron will ask for the name of your first game project (the default name is <em>New Game</em>) and create the project with the default starter content.</p>
+<p>Eldiron Creator stores it's game projects in the <em>Eldiron</em> directory in your desktops <em>Documents</em> directory. When first started Eldiron will ask for the name of your first game project (the default name is <em>New Game</em>) and create the project with the default starter content.</p>
 <p>When Eldiron is not running, you can rename game folders to change the name of the game, delete or copy game folders.</p>
 <p>The design goal for Eldiron projects was to make sharing of game content between games as easy as possible. Most game components are saved in individual files to allow sharing them with others. Each section of this book will mention where the corresponding game data is saved.</p>
 <p>Game projects consists of two directories: <em>assets</em> and <em>game</em>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="assets-directory"><a class="header" href="#assets-directory">Assets Directory</a></h1>
 <p>The <em>assets</em> directory contains all static data of the game.</p>
 <ul>
+<li>
+<p>The <strong>audio</strong> directory contains all audio assets of your game. Only WAV files are currently supported.</p>
+</li>
 <li>
 <p>The <strong>fonts</strong> directory contains all fonts used by the game, to install new fonts just copy new fonts into this directory and on the next restart of Eldiron they will show up in the relevant font selectors.</p>
 </li>
@@ -173,13 +176,18 @@
 </ul>
 <p>The name of each file represents the in-game name of the represented entity. For example you can just rename a character file to rename the character itself. Eldiron will perform the same action when asked to rename a character.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="game-directory"><a class="header" href="#game-directory">Game Directory</a></h1>
-<p>The <em>game</em> directory contains all user created data for the game.</p>
-<p>Each folder name represents the type of game content it contains and matches the user interface sections in Eldiron and in this book.</p>
+<p>The <em>game</em> directory contains all user created data for the game, such as regions (drawn via tiles in the region editor) or character behavior graphs.</p>
+<p>Each folder name represents the type of game content it contains and matches the user interface sections in Eldiron and in this book (i.e. <em>regions</em>, <em>characters</em>, <em>systems</em> and <em>items</em>) with the game behavior located directly in the game directory.</p>
 <p>You can share individual files with others, but there are some dependencies you have to be aware of:</p>
 <ul>
-<li><em>Region</em> files need the tile-maps used to draw the region in the <em>assets/tilemaps</em> directory.</li>
-<li><em>Systems</em> behavior files may be dependent on variables defined in the <em>characters</em> which invoke them.</li>
+<li>
+<p><em>Region</em> files need the tile-maps used to draw the region in the <em>assets/tilemaps</em> directory.</p>
+</li>
+<li>
+<p><em>Systems</em> behavior files may be dependent on variables defined in the <em>characters</em> which invoke them.</p>
+</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="node-graphs--scripting"><a class="header" href="#node-graphs--scripting">Node Graphs &amp; Scripting</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="user-interface-of-eldiron-creator"><a class="header" href="#user-interface-of-eldiron-creator">User Interface of Eldiron Creator</a></h1>
 <p>Eldiron Creator has two main toolbars.</p>
 <h4 id="the-control-toolbar"><a class="header" href="#the-control-toolbar">The Control Toolbar</a></h4>
@@ -233,6 +241,15 @@
 <p>By clicking the <strong>Set Anim</strong> button you create an animation for the first tile in the selected range. The other tiles will be set to <em>Unused</em> by default.</p>
 <p>The <strong>Clear Anim</strong> button will remove an animation sequence form the currently selected tile.</p>
 <p>The <strong>Set Default</strong> button will set the currently selected tile as the default tile of the tile-map, it will be shown as the tile-map icon in the overview.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="regions"><a class="header" href="#regions">Regions</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="projects-1"><a class="header" href="#projects-1">Projects</a></h1>
+<p>Eldiron Creator stores it's game projects in the <em>Eldiron</em> directory in your desktops <em>Documents</em> directory. When first started Eldiron will ask for the name of your first game project (the default name is <em>New Game</em>) and create the project with the default starter content.</p>
+<p>When Eldiron is not running, you can rename game folders to change the name of the game, delete or copy game folders.</p>
+<p>The design goal for Eldiron projects was to make sharing of game content between games as easy as possible. Most game components are saved in individual files to allow sharing them with others. Each section of this book will mention where the corresponding game data is saved.</p>
+<p>Game projects consists of two directories: <em>assets</em> and <em>game</em>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="systems"><a class="header" href="#systems">Systems</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="items"><a class="header" href="#items">Items</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="game-view"><a class="header" href="#game-view">Game View</a></h1>
 
                     </main>
 

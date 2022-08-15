@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>User Interface - Eldiron Book (WiP)</title>
+        <title>Systems View - Eldiron Book (WiP)</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="nodegraph.html"><strong aria-hidden="true">3.</strong> Node Graphs & Scripting </a></li><li class="chapter-item expanded "><a href="ui_creator.html" class="active"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assets.html"><strong aria-hidden="true">4.1.</strong> Assets View</a></li><li class="chapter-item expanded "><a href="regions.html"><strong aria-hidden="true">4.2.</strong> Regions View</a></li><li class="chapter-item expanded "><a href="characters.html"><strong aria-hidden="true">4.3.</strong> Characters View</a></li><li class="chapter-item expanded "><a href="systems.html"><strong aria-hidden="true">4.4.</strong> Systems View</a></li><li class="chapter-item expanded "><a href="items.html"><strong aria-hidden="true">4.5.</strong> Items View</a></li><li class="chapter-item expanded "><a href="game.html"><strong aria-hidden="true">4.6.</strong> Game View</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="nodegraph.html"><strong aria-hidden="true">3.</strong> Node Graphs & Scripting </a></li><li class="chapter-item expanded "><a href="ui_creator.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assets.html"><strong aria-hidden="true">4.1.</strong> Assets View</a></li><li class="chapter-item expanded "><a href="regions.html"><strong aria-hidden="true">4.2.</strong> Regions View</a></li><li class="chapter-item expanded "><a href="characters.html"><strong aria-hidden="true">4.3.</strong> Characters View</a></li><li class="chapter-item expanded "><a href="systems.html" class="active"><strong aria-hidden="true">4.4.</strong> Systems View</a></li><li class="chapter-item expanded "><a href="items.html"><strong aria-hidden="true">4.5.</strong> Items View</a></li><li class="chapter-item expanded "><a href="game.html"><strong aria-hidden="true">4.6.</strong> Game View</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,31 +142,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="user-interface-of-eldiron-creator"><a class="header" href="#user-interface-of-eldiron-creator">User Interface of Eldiron Creator</a></h1>
-<p>Eldiron Creator has two main toolbars.</p>
-<h4 id="the-control-toolbar"><a class="header" href="#the-control-toolbar">The Control Toolbar</a></h4>
-<p>The top one is called the control toolbar and has these functions:</p>
-<ul>
-<li><strong>Undo / Redo</strong>. The undo / redo state depends on the current view. Not all views have undo support.</li>
-<li><strong>Project Switch</strong>. You can switch through your current game projects by clicking the <strong>&lt; &gt;</strong> arrows.</li>
-<li><strong>Help</strong>. Opens this book on the currently displayed view section.</li>
-<li><strong>Play</strong>. Plays the game.</li>
-<li><strong>Debug</strong>. Debugs the game. This is mostly useful in the Region, Character and System views as you can visually see the node connections which are currently executed. Also you can monitor the variables in the Characters view as they always reflect the in-game state.</li>
-</ul>
-<h4 id="the-view-toolbar"><a class="header" href="#the-view-toolbar">The View Toolbar</a></h4>
-<p>You can select the current view in the view toolbar (Assets, Regions, Characters, Systems, Items and Game). All views have two states, an overview state which shows all elements in an overview (activated by pressing the left part of the view button) and the detail state which shows an editor for the currently selected element (activated by pressing the right part of the button).</p>
-<p>All views also have keyboard shortcuts between '1' to '7'.</p>
-<p>To the left of the view buttons is also an element switch, you can use its <strong>&lt; &gt;</strong> buttons to switch through all available elements in the current view (or use the tab key to cycle through the currently visible elements).</p>
+                        <h1 id="systems"><a class="header" href="#systems">Systems</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="nodegraph.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="characters.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="assets.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="items.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -176,11 +162,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="nodegraph.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="characters.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="assets.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="items.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
