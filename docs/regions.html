@@ -30,6 +30,7 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./mdbook-admonish.css">
 
     </head>
     <body>
@@ -81,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="nodegraph.html"><strong aria-hidden="true">3.</strong> Node Graphs & Scripting </a></li><li class="chapter-item expanded "><a href="ui_creator.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assets.html"><strong aria-hidden="true">4.1.</strong> Assets View</a></li><li class="chapter-item expanded "><a href="regions.html" class="active"><strong aria-hidden="true">4.2.</strong> Regions View</a></li><li class="chapter-item expanded "><a href="characters.html"><strong aria-hidden="true">4.3.</strong> Characters View</a></li><li class="chapter-item expanded "><a href="systems.html"><strong aria-hidden="true">4.4.</strong> Systems View</a></li><li class="chapter-item expanded "><a href="items.html"><strong aria-hidden="true">4.5.</strong> Items View</a></li><li class="chapter-item expanded "><a href="game.html"><strong aria-hidden="true">4.6.</strong> Game View</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="nodegraph.html"><strong aria-hidden="true">3.</strong> Node Graphs & Scripting </a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nodegraph_behavior_trees.html"><strong aria-hidden="true">3.1.</strong> Behavior Trees</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Control Flow</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Scripts</div></li></ol></li><li class="chapter-item expanded "><a href="ui_creator.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assets.html"><strong aria-hidden="true">4.1.</strong> Assets View</a></li><li class="chapter-item expanded "><a href="regions.html" class="active"><strong aria-hidden="true">4.2.</strong> Regions View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="regions_drawing_tiles.html"><strong aria-hidden="true">4.2.1.</strong> Drawing Tiles</a></li><li class="chapter-item expanded "><a href="regions_edit_areas.html"><strong aria-hidden="true">4.2.2.</strong> Edit Areas</a></li><li class="chapter-item expanded "><a href="regions_characters.html"><strong aria-hidden="true">4.2.3.</strong> Characters</a></li><li class="chapter-item expanded "><a href="regions_settings.html"><strong aria-hidden="true">4.2.4.</strong> Settings</a></li></ol></li><li class="chapter-item expanded "><a href="characters.html"><strong aria-hidden="true">4.3.</strong> Characters View</a></li><li class="chapter-item expanded "><a href="systems.html"><strong aria-hidden="true">4.4.</strong> Systems View</a></li><li class="chapter-item expanded "><a href="items.html"><strong aria-hidden="true">4.5.</strong> Items View</a></li><li class="chapter-item expanded "><a href="game.html"><strong aria-hidden="true">4.6.</strong> Game View</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reference</li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Nodes</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -142,7 +143,20 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="regions"><a class="header" href="#regions">Regions</a></h1>
+                        <h1 id="regions-view-overview"><a class="header" href="#regions-view-overview">Regions View: Overview</a></h1>
+<p><img src="images/regions_overview.png" alt="Regions Overview" /></p>
+<p>Regions in Eldiron can be towns, dungeons, the world itself, i.e. anywhere the characters can go. You can paint regions with the tiles you defined in the assets view. The behavior of tiles depends on the properties you set for the tiles in the <a href="./assets.html">tile-map details view</a>.</p>
+<p>If you want to create a new region you can simply drag and drop the <em>Regions</em> item on the left into the overview. You can rename and delete regions using the context menu of each region node (located in the upper right of each node).</p>
+<p>Opening the region details is as simple as clicking the preview thumbnail of the region node you want to edit.</p>
+<h1 id="region-details-view"><a class="header" href="#region-details-view">Region Details View</a></h1>
+<p>The details view has different modes which allow you to edit different aspects of a region:</p>
+<ul>
+<li><a href="./regions_drawing_tiles.html">Draw Tiles</a>. The drawing mode. Hotkey: 'D'.</li>
+<li><a href="./regions_edit_areas.html">Edit Areas</a>. Define areas and edit their behavior. Hotkey: 'E'.</li>
+<li><a href="./regions_characters.html">Characters</a>. Place character instances in the region. Hotkey: 'C'.</li>
+<li><a href="./regions_settings.html">Settings</a>. Edit the settings of the region. Hotkey: 'S'.</li>
+</ul>
+<p>You can select the mode by clicking on the mode widget (which has a redish color) or by pressing the hotkey of a mode.</p>
 
                     </main>
 
@@ -152,7 +166,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="characters.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="regions_drawing_tiles.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -166,7 +180,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="characters.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="regions_drawing_tiles.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -1,6 +1,6 @@
 # Assets View: Overview
 
-In the assets overview you can add assets to your game project.
+In the assets overview you can add to and edit the assets of your game.
 
 <p align="center">
   <img src="images/assets_overview.png">
@@ -10,9 +10,11 @@ The assets overview displays a node for each asset present in the [assets](/proj
 
 Assets currently are:
 
+* **Audio** files.
+
 * **Tile-maps**. The icon displayed for the node is the tile set as default tile in the details view. You can set the *grid size* of the tile-map (the size of the square tiles in the tile-map) by clicking on the *Grid Size* property of the node.
 
-* **Audio** files.
+You can edit the details for a given asset by clicking the preview thumbnail of the asset node you want to edit.
 
 # Details: Tile-maps
 
@@ -34,13 +36,13 @@ The most important step is to give each tile a usage role, this can be one of:
 * **Utility** - Utility character tiles. Like a ship or a horse.
 * **Water** - Water tiles. Tiles where a ship can go.
 * **Effect** - Effect tiles, like an explosion.
-* **Icon** - In game icons (Swords, armor etc.).
-* **UI Element** - UI Elements for screens and widgets.
+* **Icon** - In game icons for inventories etc (swords, armor etc.).
+* **UI Element** - UI elements for screens and widgets.
 
- When you click the **Enter Tags** button you can assign a ',' separated *tags* to a tile, like *cupboard* or *waterfall*. Tags are always lower case. Tags can be used to quickly find tiles or to auto-convert regions to different tile-maps (not yet implemented).
+ When you click the **Enter Tags** button you can assign command separated *tags* to a tile, like *cupboard* or *waterfall*. Tags are always lower case. Tags can be used to quickly find tiles or to auto-convert regions to different tile-maps (not yet implemented).
 
  By clicking the **Set Anim** button you create an animation for the first tile in the selected range. The other tiles will be set to *Unused* by default.
 
 The **Clear Anim** button will remove an animation sequence form the currently selected tile.
 
-The **Set Default** button will set the currently selected tile as the default tile of the tile-map, it will be shown as the tile-map icon in the overview.
+The **Set Default** button will set the currently selected tile as the default tile of the tile-map, it will be shown as the tile-map thumbnail in the overview.
