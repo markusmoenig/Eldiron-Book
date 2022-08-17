@@ -18,10 +18,12 @@ You could just set the expression to
 ```
 as the speed.
 
-Or as we do in the above screenshot you could set to
+Or as we do in the above screenshot you could set it to
 ```rust
 9 - d2
 ```
 which is 9 minus a dice throw of 2 (a random number of one or two) which gives a bit of a random speed, as this expression is evaluated for every movement the speed varies while the character is walking from tile to tile.
 
 Or if things get more complex you could check if the character is on horseback or not or which usage role the current tile the characer is standing on has (for making the character walk slower in forests or hills).
+
+To understand node graphs please read about [behavior trees](./nodegraph_behavior_trees.md), [control flow]() and the scripting subsystem.

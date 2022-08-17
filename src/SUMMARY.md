@@ -23,6 +23,9 @@
   - [Systems View](./systems.md)
   - [Items View](./items.md)
   - [Game View](./game.md)
+    - [Screens](./game_screens.md)
+    - [Widgets]()
+    - [Settings](./game_settings.md)
 
 # Reference
 
