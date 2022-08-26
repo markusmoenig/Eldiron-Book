@@ -6,7 +6,7 @@ Areas are a group of tiles in a region which share common behavior. For example 
 
 You can cycle through the areas in your region by using the button next to the red *Edit Areas* button. Pressing the *Add Area* button will create an empty new area (that means no tiles are assigned to this area yet). You can *Delete* and *Rename* areas by pressing the respective button.
 
-Clicking on a tile in the region will add the tile to the current area if the *Add Tile* mode is active, if it is set to *Remove* the tile will be removed from the area.
+Clicking on a tile in the region will add the tile to the current area if the *Add Tile* mode is active, if it is set to *Remove* the tile will be removed from the area and if it is set to *Pick* it will select the area the clicked tile belongs to.
 
 ## Behavior Nodes
 
