@@ -23,10 +23,10 @@
   - [Systems View](./systems.md)
   - [Items View](./items.md)
   - [Game View](./game.md)
-    - [Screens](./game_screens.md)
-    - [Widgets]()
     - [Settings](./game_settings.md)
 
 # Reference
 
+- [Scripting](./ref_scripting.md)
+  - [Screen Scripts](./ref_screen_scripts.md)
 - [Nodes]()
