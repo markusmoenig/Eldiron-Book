@@ -365,15 +365,17 @@
 <p>The game view works differently than the other views in that it does not have a detail view, as there is only one game graph. Instead the detail button will show the <a href="./game_settings.html">game settings</a> which define global game properties.</p>
 <p>Screen nodes and their screen scripts play an important role as they draw the content of your game as well as define user interaction. You can read more about screen scripts in the reference <a href="./ref_screen_scripts.html">here</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="game-settings"><a class="header" href="#game-settings">Game Settings</a></h1>
-<div id="admonition-note" class="admonition note">
-<div class="admonition-title">
-<p>Note</p>
-<p><a class="admonition-anchor-link" href="game_settings.html#admonition-note"></a></p>
-</div>
-<div>
-<p>To be done</p>
-</div>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="scripting"><a class="header" href="#scripting">Scripting</a></h1>
+<p>The game settings define global poperties for your game. Here is a list of all supported properties.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// The screen size of the game window.
+screen_size = 1024, 608
+
+// The default square tile size when drawing game content.
+square_tile_size = 32
+<span class="boring">}
+</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scripting"><a class="header" href="#scripting">Scripting</a></h1>
 <p>Scripting is an important building block for many tasks in Eldiron.</p>
 <p>It provides the foundation of the node system and with screen scripts you define both the visible content of your game as well as the user interaction.</p>
 <p>The scripting engine in Eldiron uses <a href="https://rhai.rs">Rhai</a>, a Rust based, easy-to-use yet powerful scripting language. Please see the <a href="https://rhai.rs/book/">Rhai Book</a> for furher information on Rhai and it's syntax.</p>
