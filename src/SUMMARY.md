@@ -20,8 +20,12 @@
     - [Characters](./regions_characters.md)
     - [Settings](./regions_settings.md)
   - [Characters View](./characters.md)
+    - [NPCs](./characters_npc.md)
+    - [Player](./characters_player.md)
   - [Systems View](./systems.md)
   - [Items View](./items.md)
+    - [State](./item_state.md)
+    - [Settings](./item_settings.md)
   - [Game View](./game.md)
     - [Settings](./game_settings.md)
 
