@@ -4,8 +4,16 @@
 
 In the settings you can tune many region specific settings.
 
-* **background**. A hex color used as the background color of the region while drawing. Default is *#000000#, i.e. black.
+```rust
+// The background color of the region
+background = #000000
+```
 
-Missing features:
+A hex color used as the background color of the region while drawing. Default is #000000, i.e. black.
 
-* A lot
+```rust
+// Use "tile" for tile based movement or "pixel" for sub-tile movement.
+movement = "pixel"
+```
+
+Defines the movement mode, tile based movements directly moves characters from one tile to the next, while pixel based movements create a smooth animation between tiles.

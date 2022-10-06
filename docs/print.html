@@ -331,13 +331,20 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="settings"><a class="header" href="#settings">Settings</a></h1>
 <p><img src="images/regions_settings.png" alt="Regions Draw Tiles" /></p>
 <p>In the settings you can tune many region specific settings.</p>
-<ul>
-<li><strong>background</strong>. A hex color used as the background color of the region while drawing. Default is *#000000#, i.e. black.</li>
-</ul>
-<p>Missing features:</p>
-<ul>
-<li>A lot</li>
-</ul>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// The background color of the region
+background = #000000
+<span class="boring">}
+</span></code></pre></pre>
+<p>A hex color used as the background color of the region while drawing. Default is #000000, i.e. black.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Use &quot;tile&quot; for tile based movement or &quot;pixel&quot; for sub-tile movement.
+movement = &quot;pixel&quot;
+<span class="boring">}
+</span></code></pre></pre>
+<p>Defines the movement mode, tile based movements directly moves characters from one tile to the next, while pixel based movements create a smooth animation between tiles.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="characters-view-overview"><a class="header" href="#characters-view-overview">Characters View: Overview</a></h1>
 <p><img src="images/characters_overview.png" alt="NodeGraph" /></p>
 <p>The characters view allows you to define characters, or character templates for non-player-characters. It utilizes <a href="./nodegraph.html">nodegraphs</a> and <a href="./nodegraph_behavior_trees.html">behavior trees</a> to implement character AI. Please read these chapters first.</p>
