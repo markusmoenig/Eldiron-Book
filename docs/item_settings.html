@@ -173,6 +173,23 @@ static = true
 <span class="boring">}
 </span></code></pre></pre>
 <p>If you set the item to static, it cannot be picked up by the user. Imagine a campfire for example. Static items are a great way to add interactivity to the environment. Note that static items and <a href="./regions_edit_areas.html">areas</a> have overlapping features. Using static items has the advantage that you can just simply instantiate items as many times as you like, whereas placing tiles and defining areas and behavior for them takes a bit more time and effort (but allows for more customized behavior).</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// The sales price of the item. 0.0 if the item cannot be sold.
+price = 0.0
+<span class="boring">}
+</span></code></pre></pre>
+<p>The sales price of the item in your game currency (i.e. gold). This is a float value so that your game can optionally support a secondary currency in the fractional value of the float (like for example silver).</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>Eldiron does not currently support a secondary currency. This will be added in the future.</p>
+</div>
+</div>
+<p>See also the currency properties in the <a href="./game_settings.html">game settings</a>.</p>
 
                     </main>
 

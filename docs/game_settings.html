@@ -149,11 +149,23 @@
 </span><span class="boring">fn main() {
 </span>// The screen size of the game window.
 screen_size = 1024, 608
-
-// The default square tile size when drawing game content.
+<span class="boring">}
+</span></code></pre></pre>
+<p>This setting defines the size of your game window.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// The default square tile size when drawing game content.
 square_tile_size = 32
 <span class="boring">}
 </span></code></pre></pre>
+<p>The size of a square tile when drawing game content.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// The variable name of your primary currency. &quot;gold&quot; by default.
+primary_currency = &quot;gold&quot;
+<span class="boring">}
+</span></code></pre></pre>
+<p>The variable name of your primary currency. You would assign currency to your character via a startup tree, like <code>rust let gold = 10;</code>. The <em>primary_currency</em> setting lets Eldiron know which variable in the character scope defines the primary currency.</p>
 
                     </main>
 
