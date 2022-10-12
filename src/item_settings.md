@@ -41,5 +41,4 @@ The sales price of the item in your game currency (i.e. gold). This is a float v
 Eldiron does not currently support a secondary currency. This will be added in the future.
 ```
 
-
 See also the currency properties in the [game settings](./game_settings.md).

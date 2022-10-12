@@ -467,10 +467,22 @@ square_tile_size = 32
 </span><span class="boring">fn main() {
 </span>// The variable name of your primary currency. &quot;gold&quot; by default.
 primary_currency = &quot;gold&quot;
+// The variable name of your (optional) secondary currency. &quot;silver&quot; by default.
+secondary_currency = &quot;silver&quot;
+// How much secondary currency makes up one primary. 100 by default.
+secondary_to_primary = 100
 <span class="boring">}
 </span></code></pre></pre>
 <p>The variable name of your primary currency. You would assign currency to your character via a startup tree, like <code>rust let gold = 10;</code>. The <em>primary_currency</em> setting lets Eldiron know which variable in the character scope defines the primary currency.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="scripting"><a class="header" href="#scripting">Scripting</a></h1>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="game_settings.html#admonition-note"></a></p>
+</div>
+<div>
+<p>Secondary currencies are not yet supported. This will be added in the future.</p>
+</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="scripting"><a class="header" href="#scripting">Scripting</a></h1>
 <p>Scripting is an important building block for many tasks in Eldiron.</p>
 <p>It provides the foundation of the node system and with screen scripts you define both the visible content of your game as well as the user interaction.</p>
 <p>The scripting engine in Eldiron uses <a href="https://rhai.rs">Rhai</a>, a Rust based, easy-to-use yet powerful scripting language. Please see the <a href="https://rhai.rs/book/">Rhai Book</a> for furher information on Rhai and it's syntax.</p>
