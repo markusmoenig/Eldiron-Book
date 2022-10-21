@@ -1,6 +1,6 @@
 # Behavior Trees
 
-Every node graph in Eldiron (except [area nodes](./regions_edit_areas.md) which are more simple) utilizes behavior trees to break up the overall behavior into smaller, easily understandable chunks.
+Every node graph in Eldiron (except [area nodes](./regions_edit_areas.md) which are a bit more simple) utilizes behavior trees to break up the overall behavior into smaller, easily understandable chunks (trees).
 
 A behavior tree is just a node with several terminals at the bottom which get executed from left to right. You typically rename the behavior tree to indicate what behavior the tree is executing, for example *Go Raiding*, or *Talk* and *Combat*.
 
@@ -8,7 +8,7 @@ Every behavior tree node has an *Execute* property which indicates when the tree
 
 - **Always**. The behavior tree is always executed if the graph is not locked.
 - **On Startup**. The behavior tree is only executed once when the graph is created.
-- **On Target**. The behavior tree is executed when somebody is targetting (i.e. interacting) with the character. You can than decide to **lock** a certain tree which handles the given situation (combat, having a talk or selling something) and unlock the tree when the situation is handled and normal behavior is resumed.
+- **On Demand**. The behavior tree is executed on demand.
 
 Behavior trees perform the AI for non-player-characters (NPCs) and connect input commands from the *Player* character to the right player action (see the [characters section](./characters.md)).
 

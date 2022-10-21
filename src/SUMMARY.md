@@ -31,6 +31,10 @@
 
 # Reference
 
+- [Nodes]()
+  - [Control Flow]()
+  - [Action]()
+    - [Message](./nodes/message.md)
+  - [Area Specific]()
 - [Scripting](./ref_scripting.md)
   - [Screen Scripts](./ref_screen_scripts.md)
-- [Nodes]()
