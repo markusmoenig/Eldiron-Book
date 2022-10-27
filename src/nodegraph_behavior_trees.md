@@ -4,6 +4,8 @@ Every node graph in Eldiron (except [area nodes](./regions_edit_areas.md) which 
 
 A behavior tree is just a node with several terminals at the bottom which get executed from left to right. You typically rename the behavior tree to indicate what behavior the tree is executing, for example *Go Raiding*, or *Talk* and *Combat*.
 
+In a programming language behavior trees would be similar to callable functions.
+
 Every behavior tree node has an *Execute* property which indicates when the tree is executed:
 
 - **Always**. The behavior tree is always executed if the graph is not locked.
