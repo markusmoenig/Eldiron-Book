@@ -1,6 +1,6 @@
 # Node Graphs & Scripting in Eldiron
 
-![NodeGraph](images/nodegraph.png)
+![NodeGraph](../images/nodegraph.png)
 
 Node graphs in Eldiron are a mix between a behavior node system and scripting. Eldiron tries to combine the best of both worlds. The overall flow of execution is defined via nodes, while parameters of nodes are expressions or scripts which can be as complex as needed.
 

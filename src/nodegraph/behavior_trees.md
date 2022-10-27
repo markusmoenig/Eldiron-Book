@@ -17,5 +17,5 @@ Behavior trees perform the AI for non-player-characters (NPCs) and connect input
 All behavior trees in a graph are listed as tabs at the top of the graph. Select the given behavior to edit it.
 
 ```admonish tip
-When you debug a game, the graph will visualize which node connections are being executed by coloring executed connections in orange.
+To create a new behavior tree just drag and drop a *Behavior Tree* node item into the node graph.
 ```
