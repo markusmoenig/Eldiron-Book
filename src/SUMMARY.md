@@ -13,6 +13,8 @@
   - [Control Flow](./nodegraph/control_flow.md)
   - [Scripting](./nodegraph/scripting.md)
   - [Mechanics](./nodegraph/mechanics.md)
+  - [Examples](./nodegraph/examples.md)
+    - [Lookout / Random Walk / Deal Damage](./nodegraph/examples/lookout.md)
 - [User Interface](./ui_creator.md)
   - [Assets View](./assets.md)
   - [Regions View](./regions.md)
@@ -39,7 +41,7 @@
   - [Control Flow]()
     - [Behavior Tree](./nodes/behavior_tree.md)
     - [Expression](./nodes/expression.md)
-    - [Has Target](./nodes/has_target.md)
+    - [Has Target ?](./nodes/has_target.md)
     - [Linear](./nodes/light.md)
     - [Sequence](./nodes/sequence.md)
 
