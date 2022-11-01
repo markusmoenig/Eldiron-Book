@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Mechanics - Eldiron Book (WiP)</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href=".././mdbook-admonish.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Eldiron Creator</li><li class="chapter-item expanded "><a href="../installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../projects.html"><strong aria-hidden="true">2.</strong> Project Layout</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../projects/assets.html"><strong aria-hidden="true">2.1.</strong> Assets Directory</a></li><li class="chapter-item expanded "><a href="../projects/game.html"><strong aria-hidden="true">2.2.</strong> Game Directory</a></li></ol></li><li class="chapter-item expanded "><a href="../nodegraph/nodegraph.html"><strong aria-hidden="true">3.</strong> Node Graphs & Scripting </a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nodegraph/behavior_trees.html"><strong aria-hidden="true">3.1.</strong> Behavior Trees</a></li><li class="chapter-item expanded "><a href="../nodegraph/control_flow.html"><strong aria-hidden="true">3.2.</strong> Control Flow</a></li><li class="chapter-item expanded "><a href="../nodegraph/scripting.html"><strong aria-hidden="true">3.3.</strong> Scripting</a></li><li class="chapter-item expanded "><a href="../nodegraph/mechanics.html" class="active"><strong aria-hidden="true">3.4.</strong> Mechanics</a></li></ol></li><li class="chapter-item expanded "><a href="../ui_creator.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../assets.html"><strong aria-hidden="true">4.1.</strong> Assets View</a></li><li class="chapter-item expanded "><a href="../regions.html"><strong aria-hidden="true">4.2.</strong> Regions View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../regions_drawing_tiles.html"><strong aria-hidden="true">4.2.1.</strong> Drawing Tiles</a></li><li class="chapter-item expanded "><a href="../regions_edit_areas.html"><strong aria-hidden="true">4.2.2.</strong> Edit Areas</a></li><li class="chapter-item expanded "><a href="../regions_characters.html"><strong aria-hidden="true">4.2.3.</strong> Characters</a></li><li class="chapter-item expanded "><a href="../regions_settings.html"><strong aria-hidden="true">4.2.4.</strong> Settings</a></li></ol></li><li class="chapter-item expanded "><a href="../characters.html"><strong aria-hidden="true">4.3.</strong> Characters View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../characters_npc.html"><strong aria-hidden="true">4.3.1.</strong> NPCs</a></li><li class="chapter-item expanded "><a href="../characters_player.html"><strong aria-hidden="true">4.3.2.</strong> Player</a></li></ol></li><li class="chapter-item expanded "><a href="../systems.html"><strong aria-hidden="true">4.4.</strong> Systems View</a></li><li class="chapter-item expanded "><a href="../items.html"><strong aria-hidden="true">4.5.</strong> Items View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../item_state.html"><strong aria-hidden="true">4.5.1.</strong> State</a></li><li class="chapter-item expanded "><a href="../item_settings.html"><strong aria-hidden="true">4.5.2.</strong> Settings</a></li></ol></li><li class="chapter-item expanded "><a href="../game.html"><strong aria-hidden="true">4.6.</strong> Game View</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../game_settings.html"><strong aria-hidden="true">4.6.1.</strong> Settings</a></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reference</li><li class="chapter-item expanded "><a href="../scripting/scripting.html"><strong aria-hidden="true">5.</strong> Scripting</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../scripting/screen_scripts.html"><strong aria-hidden="true">5.1.</strong> Screen Scripts</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Nodes</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Control Flow</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nodes/behavior_tree.html"><strong aria-hidden="true">6.1.1.</strong> Behavior Tree</a></li><li class="chapter-item expanded "><a href="../nodes/expression.html"><strong aria-hidden="true">6.1.2.</strong> Expression</a></li><li class="chapter-item expanded "><a href="../nodes/has_target.html"><strong aria-hidden="true">6.1.3.</strong> Has Target</a></li><li class="chapter-item expanded "><a href="../nodes/light.html"><strong aria-hidden="true">6.1.4.</strong> Linear</a></li><li class="chapter-item expanded "><a href="../nodes/sequence.html"><strong aria-hidden="true">6.1.5.</strong> Sequence</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> Action</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nodes/audio.html"><strong aria-hidden="true">6.2.1.</strong> Audio</a></li><li class="chapter-item expanded "><a href="../nodes/call_behavior.html"><strong aria-hidden="true">6.2.2.</strong> Call Behavior</a></li><li class="chapter-item expanded "><a href="../nodes/call_system.html"><strong aria-hidden="true">6.2.3.</strong> Call System</a></li><li class="chapter-item expanded "><a href="../nodes/close_in.html"><strong aria-hidden="true">6.2.4.</strong> Close In</a></li><li class="chapter-item expanded "><a href="../nodes/deal_damage.html"><strong aria-hidden="true">6.2.5.</strong> Deal Damage</a></li><li class="chapter-item expanded "><a href="../nodes/drop_inventory.html"><strong aria-hidden="true">6.2.6.</strong> Drop Inventory</a></li><li class="chapter-item expanded "><a href="../nodes/effect.html"><strong aria-hidden="true">6.2.7.</strong> Effect</a></li><li class="chapter-item expanded "><a href="../nodes/heal.html"><strong aria-hidden="true">6.2.8.</strong> Heal</a></li><li class="chapter-item expanded "><a href="../nodes/light.html"><strong aria-hidden="true">6.2.9.</strong> Light</a></li><li class="chapter-item expanded "><a href="../nodes/lock_tree.html"><strong aria-hidden="true">6.2.10.</strong> Lock Tree</a></li><li class="chapter-item expanded "><a href="../nodes/lookout.html"><strong aria-hidden="true">6.2.11.</strong> Lookout</a></li><li class="chapter-item expanded "><a href="../nodes/message.html"><strong aria-hidden="true">6.2.12.</strong> Message</a></li><li class="chapter-item expanded "><a href="../nodes/multi_choice.html"><strong aria-hidden="true">6.2.13.</strong> Multi Choice</a></li><li class="chapter-item expanded "><a href="../nodes/pathfinder.html"><strong aria-hidden="true">6.2.14.</strong> Pathfinder</a></li><li class="chapter-item expanded "><a href="../nodes/random_walk.html"><strong aria-hidden="true">6.2.15.</strong> Random Walk</a></li><li class="chapter-item expanded "><a href="../nodes/respawn.html"><strong aria-hidden="true">6.2.16.</strong> Respawn</a></li><li class="chapter-item expanded "><a href="../nodes/screen.html"><strong aria-hidden="true">6.2.17.</strong> Screen</a></li><li class="chapter-item expanded "><a href="../nodes/script.html"><strong aria-hidden="true">6.2.18.</strong> Script</a></li><li class="chapter-item expanded "><a href="../nodes/sell.html"><strong aria-hidden="true">6.2.19.</strong> Sell</a></li><li class="chapter-item expanded "><a href="../nodes/set_state.html"><strong aria-hidden="true">6.2.20.</strong> Set State</a></li><li class="chapter-item expanded "><a href="../nodes/set_tile.html"><strong aria-hidden="true">6.2.21.</strong> Set Tile</a></li><li class="chapter-item expanded "><a href="../nodes/take_damage.html"><strong aria-hidden="true">6.2.22.</strong> Take Damage</a></li><li class="chapter-item expanded "><a href="../nodes/take_heal.html"><strong aria-hidden="true">6.2.23.</strong> Take Heal</a></li><li class="chapter-item expanded "><a href="../nodes/target.html"><strong aria-hidden="true">6.2.24.</strong> Target</a></li><li class="chapter-item expanded "><a href="../nodes/teleport.html"><strong aria-hidden="true">6.2.25.</strong> Teleport</a></li><li class="chapter-item expanded "><a href="../nodes/unlock_tree.html"><strong aria-hidden="true">6.2.26.</strong> Unlock Tree</a></li><li class="chapter-item expanded "><a href="../nodes/untarget.html"><strong aria-hidden="true">6.2.27.</strong> Untarget</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> Area Specific</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nodes/always.html"><strong aria-hidden="true">6.3.1.</strong> Always</a></li><li class="chapter-item expanded "><a href="../nodes/action.html"><strong aria-hidden="true">6.3.2.</strong> Enter Area</a></li><li class="chapter-item expanded "><a href="../nodes/inside_area.html"><strong aria-hidden="true">6.3.3.</strong> Inside Area</a></li><li class="chapter-item expanded "><a href="../nodes/leave_area.html"><strong aria-hidden="true">6.3.4.</strong> Leave Area</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Player Specific</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../nodes/action.html"><strong aria-hidden="true">6.4.1.</strong> Action</a></li><li class="chapter-item expanded "><a href="../nodes/drop.html"><strong aria-hidden="true">6.4.2.</strong> Drop</a></li><li class="chapter-item expanded "><a href="../nodes/move.html"><strong aria-hidden="true">6.4.3.</strong> Move</a></li><li class="chapter-item expanded "><a href="../nodes/take.html"><strong aria-hidden="true">6.4.4.</strong> Take</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Eldiron Book (WiP)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="mechanics"><a class="header" href="#mechanics">Mechanics</a></h1>
+<p>While the behavior trees are very flexible, there are some fixed mechanics which are important to understand.</p>
+<h2 id="dealing-and-taking-damage"><a class="header" href="#dealing-and-taking-damage">Dealing and Taking Damage</a></h2>
+<p>Your character can deal damage via the <a href="../nodes/deal_damage.html">Deal Damage</a> node. The amount of damage dealt is returned by the numerical expression parameter <em>Damage</em> of the node. This expression can take any kind of bonuses of the character class or gear into account or just do a <code>d10</code> or similar if your character system is very simple.</p>
+<p>However the deal damage node by itself does not do any damage, it will look up and execute the <strong>onHit</strong> behavior tree on the receiving character and execute it. This tree should contain a <a href="../nodes/take_damage.html">Take Damage</a> node which has an <em>Reduce By</em> parameter which calculates the amount to reduce the incoming damage. This expression can again any bonuses from the character class or gear into account to reduce the damage. After that the node applies the incoming damage (which was reduced by the calculated amount) and applies it to the hit point variable specified in the <a href="../game_settings.html">game settings</a> (<em>HP</em> by default).</p>
+<p>If the character succeeds to take damage (i.e. does not die which means the hit points are greater than 0) it executes the green success terminal of the take damage node, if the hit points are 0 the red failure terminal is executed. See <em>Dying and Resurrection</em> below.</p>
+<div id="admonition-warning" class="admonition warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="#admonition-warning"></a></p>
+</div>
+<div>
+<p>If a character does not have a <code>onHit</code> tree or that tree does not have a take damage node, the character will never take damage!</p>
+</div>
+</div>
+<h2 id="healing-and-taking-healing"><a class="header" href="#healing-and-taking-healing">Healing and Taking Healing</a></h2>
+<p>The healing process is very similar to dealing damage. The <a href="../nodes/heal.html">Heal</a> node is used to specify the amount to heal, it than calls the <strong>onHeal</strong> tree on the receiving character which has to call the <a href="../nodes/take_heal.html">Take Heal</a> node to apply the healing.</p>
+<p>Similar to the damage system, if a character has no <strong>onHeal</strong> tree or does not call the take heal node it will not be able to receive healing.</p>
+<h2 id="dying-and-resurrection"><a class="header" href="#dying-and-resurrection">Dying and Resurrection</a></h2>
+<p>If the <a href="../nodes/take_damage.html">Take Damage</a> node fails it means your character should do. You can set the state of the character via the <a href="../nodes/set_state.html">Set State</a> node. Purging the character means it will be deleted from the system. For a player character set it to Killed so that the character is not purged but can be resurrected later.</p>
+<p>The example demo teleports the player to a healer who will resurrect him using the set state node. The healer uses the <a href="../nodes/lookout.html">Lookout</a> node to find character who can be resurrected. See <em>Targeting</em> below.</p>
+<h2 id="targeting"><a class="header" href="#targeting">Targeting</a></h2>
+<p>Players target other characters explicitly by performing some action in a given direction. But how do non player character target other characters ? The answer is the already mentioned <a href="../nodes/lookout.html">Lookout</a> node. This node searches all characters in the vicinity and checks if the character fits the expression. You can for example check its <em>alignment</em>. The node also allows checking the state of the character (<em>Normal</em> or <em>Killed</em>). For details please see the documentation of the <a href="../nodes/lookout.html">Lookout</a> node.</p>
+<p>If the lookout node finds a fitting character, it will set that character as the target. That means that nodes which work on a target, like <a href="../nodes/close_in.html">Close In</a>, <a href="../nodes/deal_damage.html">Deal Damage</a> or <a href="../nodes/heal.html">Heal</a>, will target that character.</p>
+<p>You can un-target using the <a href="../nodes/untarget.html">Untarget</a> node (for example if the target is too far away).</p>
+<hr />
+<p>Congratulations, you understood the most complex mechanics in Eldiron!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nodegraph/scripting.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ui_creator.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nodegraph/scripting.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ui_creator.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

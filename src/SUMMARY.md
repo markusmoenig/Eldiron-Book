@@ -12,6 +12,7 @@
   - [Behavior Trees](./nodegraph/behavior_trees.md)
   - [Control Flow](./nodegraph/control_flow.md)
   - [Scripting](./nodegraph/scripting.md)
+  - [Mechanics](./nodegraph/mechanics.md)
 - [User Interface](./ui_creator.md)
   - [Assets View](./assets.md)
   - [Regions View](./regions.md)
