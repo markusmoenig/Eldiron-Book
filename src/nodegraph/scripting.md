@@ -1,0 +1,38 @@
+# Scripting
+
+Every character (and optionally item) have their own script scopes, so you can create variables and control node flow via expressions.
+
+Scripting is widely used inside Eldiron, as many node parameters are script or expressions. The [Script](../nodes/script.md) node executes scripts and the [Expression](../nodes/expression.md) node controls the node flow by either succeeding or failing depending on the boolean return value of the script expression.
+
+Every character should have a startup tree which defines the variables of the character, for example
+
+```rust
+let HP = 18 + d2; // 18 plus a dice throw of d2 (a value of 1 or 2)
+let HP_MAX = HP;
+let STR = 10;
+let EXP = 0;
+let LEVEL = 1;
+...
+```
+
+The variables you define make up the attributes of your character. It is up to you if want to create a complex character system or just a minimal one. The example demo project which gets created for a new project is designed to get you started and is not too complex.
+
+The same is true for monsters, you can make them very simple or very complex, the choice is yours. In the early RPGs monsters just had some HP and created random damage. But that was because computers were slow and having a few douzens orcs with fully workded out character systems would have been too slow. This limitation does not exist anymore today.
+
+Apart from character attributes you can of course define as many helper variables as needed.
+
+Note that the ```d2``` dice throw in the example script above is built into the scripting language, you can just use any ```dx``` value (where x is any number) to get a random value between 1 and x (inclusive).
+
+In an [expression](../nodes/expression.md) node you could check if your character has an experience value greater than 1000 with for example
+
+```rust
+EXP > 1000
+```
+
+which would follow the green success terminal in the control flow if it is true or the red failure terminal if the character has less than 1000 experience points.
+
+## Special Variables
+
+The node system needs to know which variable name is used for your characters hitpoints as it needs to check if your character died or not or how much gold it has. These variable names are defined in the [game settings](../game_settings.md). When you change one of these special variable names, make sure to change them in all your scripts.
+
+For more information about scripting please see the [scripting reference](../scripting.md).

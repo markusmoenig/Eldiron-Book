@@ -11,7 +11,7 @@
 - [Node Graphs & Scripting ](./nodegraph/nodegraph.md)
   - [Behavior Trees](./nodegraph/behavior_trees.md)
   - [Control Flow](./nodegraph/control_flow.md)
-  - [Scripting](./nodegraph/scripting.rs)
+  - [Scripting](./nodegraph/scripting.md)
 - [User Interface](./ui_creator.md)
   - [Assets View](./assets.md)
   - [Regions View](./regions.md)
@@ -30,6 +30,9 @@
     - [Settings](./game_settings.md)
 
 # Reference
+
+- [Scripting](./scripting/scripting.md)
+  - [Screen Scripts](./scripting/screen_scripts.md)
 
 - [Nodes]()
   - [Control Flow]()
@@ -55,6 +58,7 @@
     - [Multi Choice](./nodes/multi_choice.md)
     - [Pathfinder](./nodes/pathfinder.md)
     - [Random Walk](./nodes/random_walk.md)
+    - [Respawn](./nodes/respawn.md)
     - [Screen](./nodes/screen.md)
     - [Script](./nodes/script.md)
     - [Sell](./nodes/sell.md)
@@ -77,5 +81,3 @@
     - [Move](./nodes/move.md)
     - [Take](./nodes/take.md)
 
-- [Scripting](./ref_scripting.md)
-  - [Screen Scripts](./ref_screen_scripts.md)
