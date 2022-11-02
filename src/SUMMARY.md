@@ -15,6 +15,7 @@
   - [Mechanics](./nodegraph/mechanics.md)
   - [Examples](./nodegraph/examples.md)
     - [Lookout / Random Walk / Deal Damage](./nodegraph/examples/lookout.md)
+    - [Taking Damage: OnHit](./nodegraph/examples/onHit.md)
 - [User Interface](./ui_creator.md)
   - [Assets View](./assets.md)
   - [Regions View](./regions.md)

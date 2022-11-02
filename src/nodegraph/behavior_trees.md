@@ -18,7 +18,13 @@ All behavior trees in a graph are listed as tabs at the top of the graph. Select
 
 ## Active vs. Passive
 
-There are some behavior trees which have a passive behavior and need to end with an " (P)". For example lets assume you have a healer character named Antony. When your player performs a custom action in a given direction Eldirons node system checks if the character (or item) located in the given direction has a behavior node tree called *"ActionName (P)"*. For example lets say the player looks towards Antony and you want to send a message to the player: Create a new behavior tree for Antony (by dragging a [Behavior Tree](../nodes/behavior_tree.md)) node into the graph. Rename the node to "Look (P)" and attach a [Message](../nodes/message.md) node to it with a status message like "You see Antony, a famous healer.". Make sure that the behavior tree is set to execute "On Demand".
+There are some behavior trees which have a passive behavior and need to end with an " (P)". For example lets assume you have a healer character named Antony. When your player performs a custom action in a given direction Eldirons node system checks if the character (or item) located in the given direction has a behavior node tree called *"ActionName (P)"*. For example lets say the player looks towards Antony and you want to send a message to the player:
+
+* Create a new behavior tree for Antony (by dragging a [Behavior Tree](../nodes/behavior_tree.md)) node into the graph.
+* Rename the node to "Look (P)"
+* Attach a [Message](../nodes/message.md) node to it with a status message like "You see Antony, a famous healer.".
+
+Make sure that the behavior tree is set to execute "On Demand".
 
 One big difference between passive behavior trees and normal ones is that passive behavior trees use the context of the caller instead of their own. You do not want to send the message to Antony but to the player who is looking in his direction. Thats why the convention with the naming is important to mark this difference.
 

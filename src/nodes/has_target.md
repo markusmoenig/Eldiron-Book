@@ -2,7 +2,7 @@
 
 Intended for NPCs.
 
-*Returns*
+ #### Returns
 
 Success if the character currently has a target, failure otherwise.
 

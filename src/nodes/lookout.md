@@ -8,17 +8,17 @@ If the node successfully finds a character it will make the character the target
 
 You can use [Untarget](../nodes/untarget.md) to un-target it again.
 
-*Parameters*
+#### Parameters
 
 * **State**. You can select if the node looks out for a *Normal* (i.e. active / alive character) or a *Killed* one (for example to resurrect it).
 * **Expression**. A numerical expression which checks the potential target character (i.e. this expression is run on the potential target!). For example a monster could check the alignment: ```alignment > 0```.
 * **Max Distance**. The maximum distance to look out for characters.
 
-*Returns*
+#### Returns
 
 * **Success**. If a fitting character has been found and is our new target.
 * **Failure**. If no character has been found.
 
-*See also*
+#### See also
 
 [Untarget](../nodes/untarget.md), [Has Target ?](../nodes/has_target.md), [Example](../nodegraph/examples/lookout.md)
