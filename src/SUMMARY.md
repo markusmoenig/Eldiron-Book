@@ -36,6 +36,7 @@
 # Reference
 
 - [Scripting](./scripting/scripting.md)
+  - [Character Scripts](./scripting/character_scripts.md)
   - [Screen Scripts](./scripting/screen_scripts.md)
 
 - [Nodes]()

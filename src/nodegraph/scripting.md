@@ -37,4 +37,6 @@ The node system needs to know which variable name is used for your characters hi
 
 Another special variable is the **alignment** variable. It is set automatically by Eldiron based on your selection for the characters alignment in the character node graph. It is set to 1 for heroes, 0 for neutrals and -1 for monsters. You can of course also use your own more complex alignment system. The alignment is one of the variables often used in the [Lookout](../nodes/lookout.md) node.
 
-For more information about scripting please see the [scripting reference](../scripting.md).
+---
+
+For more information about scripting please see the [scripting reference](../scripting.md), especially the [character scripts](../scripting/character_scripts.md).
