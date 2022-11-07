@@ -80,7 +80,7 @@
     - [Untarget](./nodes/untarget.md)
   - [Area Specific]()
     - [Always](./nodes/always.md)
-    - [Enter Area](./nodes/action.md)
+    - [Enter Area](./nodes/enter_area.md)
     - [Inside Area](./nodes/inside_area.md)
     - [Leave Area](./nodes/leave_area.md)
   - [Player Specific]()
