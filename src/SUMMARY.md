@@ -16,6 +16,7 @@
   - [Examples](./nodegraph/examples.md)
     - [Lookout / Random Walk / Deal Damage](./nodegraph/examples/lookout.md)
     - [Taking Damage: OnHit](./nodegraph/examples/onHit.md)
+  - [Area Graphs](./nodegraph/area_graphs.md)
 - [User Interface](./ui_creator.md)
   - [Assets View](./assets.md)
   - [Regions View](./regions.md)
@@ -34,6 +35,8 @@
     - [Settings](./game_settings.md)
 
 # Reference
+
+- [Changelog](./changelog.md)
 
 - [Scripting](./scripting/scripting.md)
   - [Character Scripts](./scripting/character_scripts.md)

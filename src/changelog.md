@@ -1,0 +1,11 @@
+# Changelog
+
+### v0.7.1 (WiP)
+
+* Editor: Render region previews with a rounded mask to fill all available space in the preview window and other widgets.
+* Editor: Only show preview window when character has a valid position.
+* Editor: Hide preview window for Items and Game views.
+
+### v0.7.0
+
+* First public release
