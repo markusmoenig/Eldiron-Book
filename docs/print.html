@@ -892,30 +892,45 @@ fn touch_down(x, y) {
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="multi-choice"><a class="header" href="#multi-choice">Multi Choice</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pathfinder"><a class="header" href="#pathfinder">Pathfinder</a></h1>
+<p>Intended for NPCs.</p>
+<p>This node finds and walks the path to the given target location or area.</p>
+<h4 id="parameters-6"><a class="header" href="#parameters-6">Parameters</a></h4>
+<ul>
+<li><strong>Destination</strong>. The destination position or area. If an area a random position inside the area is choosen.</li>
+<li><strong>Speed Delay</strong>. A numerical expression indicating the walking speed. 0 is the fastest, no delay, the character will move one tile per game tick. Higher values will slow the character down. A value of 4 for example would mean that the character needs 4 game ticks to move to the next tile.</li>
+</ul>
+<h4 id="returns-6"><a class="header" href="#returns-6">Returns</a></h4>
+<ul>
+<li><strong>Right</strong>. If the operation is ongoing, i.e. the character did not reach the destination yet, the right terminal is executed.</li>
+<li><strong>Success</strong>. The character reached the destination.</li>
+<li><strong>Failure</strong>. If the path to the destination is blocked for a longer period of time.</li>
+</ul>
+<h4 id="see-also-7"><a class="header" href="#see-also-7">See also</a></h4>
+<p><a href="nodes/../nodes/random_walk.html">Random Walk</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="random-walk"><a class="header" href="#random-walk">Random Walk</a></h1>
 <p>Intended for NPCs.</p>
 <p>This node randomly walks around the given position or area.</p>
-<h4 id="parameters-6"><a class="header" href="#parameters-6">Parameters</a></h4>
+<h4 id="parameters-7"><a class="header" href="#parameters-7">Parameters</a></h4>
 <ul>
 <li><strong>Max Distance</strong>. The maximum distance to walk from the starting position.</li>
 <li><strong>Speed Delay</strong>. A numerical expression indicating the walking speed. 0 is the fastest, no delay, the character will move one tile per game tick. Higher values will slow the character down. A value of 4 for example would mean that the character needs 4 game ticks to move to the next tile.</li>
 <li><strong>Delay</strong>. A numerical expression indicating the delay between movements, i.e. how many game ticks the character will wait on the same tile before moving randomly to the next one. 0 means no delay.</li>
 </ul>
-<h4 id="see-also-7"><a class="header" href="#see-also-7">See also</a></h4>
+<h4 id="see-also-8"><a class="header" href="#see-also-8">See also</a></h4>
 <p><a href="nodes/../nodegraph/examples/lookout.html">Example</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="respawn"><a class="header" href="#respawn">Respawn</a></h1>
 <p>Intended for NPCs.</p>
 <p>Respawns the NPC after a given amount of game ticks. Should be applied only to characters which were previously purged via <a href="nodes/set_state.html">Set State</a>.</p>
-<h4 id="parameters-7"><a class="header" href="#parameters-7">Parameters</a></h4>
+<h4 id="parameters-8"><a class="header" href="#parameters-8">Parameters</a></h4>
 <ul>
 <li><strong>Ticks to Wait</strong>. The amount of game ticks to wait before respawning.</li>
 </ul>
-<h5 id="see-also-8"><a class="header" href="#see-also-8">See also</a></h5>
+<h5 id="see-also-9"><a class="header" href="#see-also-9">See also</a></h5>
 <p><a href="nodes/../nodegraph/mechanics.html">Mechanics</a>, <a href="nodes/../nodegraph/examples/onHit.html">Example</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="screen"><a class="header" href="#screen">Screen</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="script"><a class="header" href="#script">Script</a></h1>
 <p>Executes the given script.</p>
-<h3 id="see-also-9"><a class="header" href="#see-also-9">See also</a></h3>
+<h3 id="see-also-10"><a class="header" href="#see-also-10">See also</a></h3>
 <p><a href="nodes/../nodegraph/scripting.html">Scripting</a>, <a href="nodes/../scripting/scripting.html">Scripting Reference</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sell"><a class="header" href="#sell">Sell</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="set-state"><a class="header" href="#set-state">Set State</a></h1>
@@ -923,32 +938,43 @@ fn touch_down(x, y) {
 <div style="break-before: page; page-break-before: always;"></div><h1 id="take-damage"><a class="header" href="#take-damage">Take Damage</a></h1>
 <p>Take damage dealt by the <a href="nodes/deal_damage.html">Deal Damage</a> node.</p>
 <p>This node calculates the reduction of the damage and applies it.</p>
-<h4 id="parameters-8"><a class="header" href="#parameters-8">Parameters</a></h4>
+<h4 id="parameters-9"><a class="header" href="#parameters-9">Parameters</a></h4>
 <ul>
 <li><strong>Reduce By</strong>. This numerical expression defines the reduction of the incoming damage. Should be based on gear (TBD).</li>
 </ul>
-<h4 id="returns-6"><a class="header" href="#returns-6">Returns</a></h4>
+<h4 id="returns-7"><a class="header" href="#returns-7">Returns</a></h4>
 <ul>
 <li><strong>Success</strong>. If the character survives the damage it took.</li>
 <li><strong>Failure</strong>. The character died. You should now <a href="nodes/set_state.html">set the state</a> to Killed or Purged. See <a href="nodes/../nodegraph/mechanics.html">Mechanics</a>. You can <a href="nodes/respawn.html">Respawn</a> non-player characters too.</li>
 </ul>
-<h4 id="see-also-10"><a class="header" href="#see-also-10">See also</a></h4>
+<h4 id="see-also-11"><a class="header" href="#see-also-11">See also</a></h4>
 <p><a href="nodes/../nodegraph/mechanics.html">Mechanics</a>, <a href="nodes/../nodegraph/examples/onHit.html">Example</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="take-heal"><a class="header" href="#take-heal">Take Heal</a></h1>
 <p>Heal the amount defined by the <a href="nodes/heal.html">Heal</a> node.</p>
 <p>This node calculates a potential healing increase and applies it to the hit points.</p>
-<h4 id="parameters-9"><a class="header" href="#parameters-9">Parameters</a></h4>
+<h4 id="parameters-10"><a class="header" href="#parameters-10">Parameters</a></h4>
 <ul>
 <li><strong>Increase By</strong>. This numerical expression define the increase of the healing based on character attributes.</li>
 </ul>
-<h4 id="returns-7"><a class="header" href="#returns-7">Returns</a></h4>
+<h4 id="returns-8"><a class="header" href="#returns-8">Returns</a></h4>
 <ul>
 <li><strong>Success</strong>. The character was successfuly healed for the given amount.</li>
 <li><strong>Failure</strong>. Healing failed.</li>
 </ul>
-<h4 id="see-also-11"><a class="header" href="#see-also-11">See also</a></h4>
+<h4 id="see-also-12"><a class="header" href="#see-also-12">See also</a></h4>
 <p><a href="nodes/../nodegraph/mechanics.html">Mechanics</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="target"><a class="header" href="#target">Target</a></h1>
+<p><strong>This node is intended for player controlled characters only</strong></p>
+<p>The player character targets another character in the user specified direction. Nodes like <a href="nodes/deal_damage.html">Deal Damage</a> will target this character.</p>
+<h4 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h4>
+<p>None</p>
+<h4 id="returns-9"><a class="header" href="#returns-9">Returns</a></h4>
+<ul>
+<li><strong>Success</strong>. The character has been successfully target.</li>
+<li><strong>Failure</strong>. Failure to target.</li>
+</ul>
+<h4 id="see-also-13"><a class="header" href="#see-also-13">See also</a></h4>
+<p>[Mechanics](../nodegraph/mechanics.md</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="teleport"><a class="header" href="#teleport">Teleport</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unlock-tree"><a class="header" href="#unlock-tree">Unlock Tree</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="untarget"><a class="header" href="#untarget">Untarget</a></h1>
@@ -1010,8 +1036,43 @@ fn touch_down(x, y) {
 <li><strong>Action</strong>. The name of the user command</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="drop"><a class="header" href="#drop">Drop</a></h1>
+<p><strong>This node is intended for player controlled characters only</strong></p>
+<p>The player character drops the user defined item.</p>
+<h4 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h4>
+<p>None</p>
+<h4 id="returns-10"><a class="header" href="#returns-10">Returns</a></h4>
+<ul>
+<li><strong>Success</strong>. The character dropped the item successfully.</li>
+<li><strong>Failure</strong>. Failure in dropping the item.</li>
+</ul>
+<h4 id="see-also-14"><a class="header" href="#see-also-14">See also</a></h4>
+<p>[Mechanics](../nodegraph/mechanics.md</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="move"><a class="header" href="#move">Move</a></h1>
+<p><strong>This node is intended for player controlled characters only</strong></p>
+<p>The node moves the player character in the user specified direction.</p>
+<h4 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h4>
+<ul>
+<li><strong>Speed Delay</strong>. A numerical expression indicating the walking speed. 0 is the fastest, no delay, the character will move one tile per game tick. Higher values will slow the character down. A value of 4 for example would mean that the character needs 4 game ticks to move to the next tile.</li>
+</ul>
+<h4 id="returns-11"><a class="header" href="#returns-11">Returns</a></h4>
+<ul>
+<li><strong>Success</strong>. The character moved successfully.</li>
+<li><strong>Failure</strong>. The path is blocked.</li>
+</ul>
+<h4 id="see-also-15"><a class="header" href="#see-also-15">See also</a></h4>
+<p>[Mechanics](../nodegraph/mechanics.md</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="take"><a class="header" href="#take">Take</a></h1>
+<p><strong>This node is intended for player controlled characters only</strong></p>
+<p>The player character targets tries to take an item in the user specified direction.</p>
+<h4 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h4>
+<p>None</p>
+<h4 id="returns-12"><a class="header" href="#returns-12">Returns</a></h4>
+<ul>
+<li><strong>Success</strong>. The character picked an item up successfully.</li>
+<li><strong>Failure</strong>. The character cannot pick up anything in this direction.</li>
+</ul>
+<h4 id="see-also-16"><a class="header" href="#see-also-16">See also</a></h4>
+<p>[Mechanics](../nodegraph/mechanics.md</p>
 
                     </main>
 
