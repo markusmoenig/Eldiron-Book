@@ -2,12 +2,11 @@
 
 Deals damage to the target.
 
-This node does not deal damage by itself. It just calculates the damage to be dealt and than calls the **onHit** tree of the target, which should contain the [Take Damage](take_damage.md) node, to reduce the damage based on the character attributes of the target.
+This node does not deal damage by itself. It just calculates the attack rating, gets the weapon damage and calls the **onHit** tree of the target, which should contain the [Take Damage](take_damage.md) node, to block the attack or reduce the damage based on the character attributes of the target.
 
 #### Parameters
 
-* **Damage**. This numerical expression defines the damage to deal. Like ```2 + d3```. Query gear for bonuses (TBD).
-* **Speed Delay**. A numerical expression indicating the delay. 0 means dealing damage for every game tick, 4 would mean a swing every 4 game ticks. Should be set to the weapon speed (TBD).
+* **Attack Rating**. This numerical expression defines the attack rating of the attack. Like ```STR + d3```. The result of this expression will be set as "attack_rating" variable on the target. In the *onHit* tree of the target you can optionally test this variable to see if the character can block the attack.
 
 #### Returns
 

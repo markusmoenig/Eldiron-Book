@@ -4,7 +4,7 @@ While the behavior trees are very flexible, there are some fixed mechanics which
 
 ## Dealing and Taking Damage
 
-Your character can deal damage via the [Deal Damage](../nodes/deal_damage.md) node. The amount of damage dealt is returned by the numerical expression parameter *Damage* of the node. This expression can take any kind of bonuses of the character class or gear into account or just do a ```d10``` or similar if your character system is very simple.
+Your character can deal damage via the [Deal Damage](../nodes/deal_damage.md) node. The amount of damage dealt is specified by the equipped item (and the item level).
 
 However the deal damage node by itself does not do any damage, it will look up and execute the **onHit** behavior tree on the receiving character and execute it. This tree should contain a [Take Damage](../nodes/take_damage.md) node which has an *Reduce By* parameter which calculates the amount to reduce the incoming damage. This expression can again any bonuses from the character class or gear into account to reduce the damage. After that the node applies the incoming damage (which was reduced by the calculated amount) and applies it to the hit point variable specified in the [game settings](../game_settings.md) (*HP* by default).
 

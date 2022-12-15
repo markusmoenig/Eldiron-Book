@@ -3,7 +3,7 @@ authors = ["Markus Moenig"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Eldiron Book (WiP)"
+title = "Eldiron Book"
 
 [preprocessor]
 

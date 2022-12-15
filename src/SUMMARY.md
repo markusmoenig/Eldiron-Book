@@ -41,6 +41,8 @@
 - [Scripting](./scripting/scripting.md)
   - [Character Scripts](./scripting/character_scripts.md)
   - [Screen Scripts](./scripting/screen_scripts.md)
+    - [Base Classes](./scripting/screen_base_classes.md)
+    - [Drawing](./scripting/screen_drawing.md)
 
 - [Nodes]()
   - [Control Flow]()
@@ -89,3 +91,6 @@
     - [Move](./nodes/move.md)
     - [Take](./nodes/take.md)
 
+  - [Skills]()
+    - [Skill Tree](./nodes/skill_tree.md)
+    - [Skill Level](./nodes/skill_level.md)

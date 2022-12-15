@@ -6,7 +6,7 @@ This node calculates the reduction of the damage and applies it.
 
 #### Parameters
 
-* **Reduce By**. This numerical expression defines the reduction of the incoming damage. Should be based on gear (TBD).
+* **Reduce By**. This numerical expression defines the reduction of the incoming damage.
 
 #### Returns
 
