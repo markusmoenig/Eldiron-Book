@@ -168,6 +168,8 @@
 <p>Players target other characters explicitly by performing some action in a given direction. But how do non player character target other characters ? The answer is the already mentioned <a href="../nodes/lookout.html">Lookout</a> node. This node searches all characters in the vicinity and checks if the character fits the expression. You can for example check its <em>alignment</em>. The node also allows checking the state of the character (<em>Normal</em> or <em>Killed</em>). For details please see the documentation of the <a href="../nodes/lookout.html">Lookout</a> node.</p>
 <p>If the lookout node finds a fitting character, it will set that character as the target. That means that nodes which work on a target, like <a href="../nodes/close_in.html">Close In</a>, <a href="../nodes/deal_damage.html">Deal Damage</a> or <a href="../nodes/heal.html">Heal</a>, will target that character.</p>
 <p>You can un-target using the <a href="../nodes/untarget.html">Untarget</a> node (for example if the target is too far away).</p>
+<h2 id="skills"><a class="header" href="#skills">Skills</a></h2>
+<p>By adding <a href="../nodes/skill_tree.html">Skill Tree</a> nodes to <em>Systems / Skills</em>, you can create new skills. These skills can be linked from Items to reference which skill to increment on use and which property and speed values to use for each level of the skill.</p>
 <hr />
 <p>Congratulations, you understood the most complex mechanics in Eldiron!</p>
 

@@ -34,6 +34,10 @@ If the lookout node finds a fitting character, it will set that character as the
 
 You can un-target using the [Untarget](../nodes/untarget.md) node (for example if the target is too far away).
 
+## Skills
+
+By adding [Skill Tree](../nodes/skill_tree.md) nodes to *Systems / Skills*, you can create new skills. These skills can be linked from items to reference which skill to increment on use and which property and speed values to use for each level of the skill.
+
 ---
 
 Congratulations, you understood the most complex mechanics in Eldiron!
